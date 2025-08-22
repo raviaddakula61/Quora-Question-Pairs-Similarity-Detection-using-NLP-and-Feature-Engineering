@@ -1,5 +1,10 @@
 streamlit
-sklearn
 fuzzywuzzy
 distance
 bs4
+scikit-learn
+pandas
+numpy
+joblib
+nltk
+regex
