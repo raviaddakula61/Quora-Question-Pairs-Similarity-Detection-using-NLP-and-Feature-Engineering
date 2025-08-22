@@ -12,7 +12,8 @@ nltk.download('stopwords')
 STOP_WORDS = set(stopwords.words('english'))
 
 # Load CountVectorizer pickle
-cv = pickle.load(open('cv.pkl', 'rb'))
+import os
+cv = pickle.load(open(os.path.join(os.path.dirname(__file__), "cv.pkl"), "rb"))
 
 # -------------------- Basic Features --------------------
 def test_common_words(q1, q2):
