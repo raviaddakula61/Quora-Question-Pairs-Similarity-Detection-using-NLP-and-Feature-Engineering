@@ -1,6 +1,6 @@
 Quora Duplicate Question Pairs Detection using NLP and Feature Engineering
 Objective
-<img width="943" height="716" alt="image" src="https://github.com/user-attachments/assets/85d95464-295b-4bcf-95c2-02b0cd69608a" />
+<img width="1310" height="776" alt="image" src="https://github.com/user-attachments/assets/8efce7de-a9d5-4817-b3d1-0b7fb95e60ff" />
 
 # Quora Duplicate Question Pairs Detector
 [Live Demo → Open the App](https://duplicatequestionpairs1.streamlit.app/)
