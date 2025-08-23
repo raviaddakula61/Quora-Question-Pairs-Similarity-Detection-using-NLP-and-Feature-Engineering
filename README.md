@@ -3,7 +3,9 @@ Objective
 
 <img width="1873" height="814" alt="image" src="https://github.com/user-attachments/assets/3a737fe7-eb07-499c-9f20-05c762b0b4cf" />
 
-🔗 Live Demo App: Try it here
+# Quora Duplicate Question Pairs Detector
+
+[Live Demo → Open the App](https://duplicatequestionpairs1.streamlit.app/)
 
 The objective of this project is to build a machine learning model that can detect whether two given questions from Quora are duplicates or not. Duplicate questions are a major challenge for Quora, as multiple users often ask the same question in slightly different ways.
 
