@@ -1,10 +1,8 @@
 Quora Duplicate Question Pairs Detection using NLP and Feature Engineering
 Objective
-
-<img width="1873" height="814" alt="image" src="https://github.com/user-attachments/assets/3a737fe7-eb07-499c-9f20-05c762b0b4cf" />
+<img width="943" height="716" alt="image" src="https://github.com/user-attachments/assets/85d95464-295b-4bcf-95c2-02b0cd69608a" />
 
 # Quora Duplicate Question Pairs Detector
-
 [Live Demo → Open the App](https://duplicatequestionpairs1.streamlit.app/)
 
 The objective of this project is to build a machine learning model that can detect whether two given questions from Quora are duplicates or not. Duplicate questions are a major challenge for Quora, as multiple users often ask the same question in slightly different ways.
