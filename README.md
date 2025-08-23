@@ -5,100 +5,51 @@ Objective
 # Quora Duplicate Question Pairs Detector
 [Live Demo → Open the App](https://duplicatequestionpairs1.streamlit.app/)
 
-The objective of this project is to build a machine learning model that can detect whether two given questions from Quora are duplicates or not. Duplicate questions are a major challenge for Quora, as multiple users often ask the same question in slightly different ways.
+## 🎯 Objective
+The objective of this project is to detect whether two given questions on **Quora** are semantically duplicate or not.  
+This helps reduce redundant questions, improves search results, and enhances user experience
 
-This project uses NLP techniques, feature engineering, and ML models to classify question pairs as Duplicate or Not Duplicate.
+## 📖 Project Description  
 
-Description
+Quora users often ask the same question in different ways:  
 
-Quora is a platform where millions of users ask and answer questions. However, many users ask the same question in different ways, which leads to:
+- *"How do I learn Python quickly?"*  
+- *"What’s the fastest way to learn Python?"*  
 
-Redundant content
+Even though the wording differs, both mean the same.  
 
-Scattered answers
+This project leverages **Natural Language Processing (NLP)**, **Feature Engineering**, and **Machine Learning** to identify such duplicate questions. A **Streamlit web app** makes it interactive and easy to use.  
+## 📂 Dataset  
 
-Poor user experience
+We used the **Quora Question Pairs Dataset**, which contains:  
 
-For example:
+- `qid1`, `qid2`: Question IDs  
+- `question1`, `question2`: The text of the questions  
+- `is_duplicate`: Target label (1 = Duplicate, 0 = Not Duplicate)  
 
-"How can I learn machine learning?"
+---
 
-"What are the best ways to study machine learning?"
+## 🛠️ Workflow  
 
-Both questions mean the same but are worded differently.
+### 1️⃣ Data Preprocessing  
+- Lowercasing & punctuation removal  
+- Contraction expansion (`you're → you are`)  
+- Stopword removal, tokenization  
 
-To solve this, we developed a model that analyzes pairs of questions and predicts whether they are duplicates.
+### 2️⃣ Feature Engineering  
+- **Token-based features**: word overlap, common word ratio  
+- **Fuzzy matching features**: QRatio, PartialRatio, WRatio  
+- **TF-IDF vectorization**: text embedding  
 
-The deployed Streamlit app allows users to enter two questions and instantly check if they are duplicates.
+### 3️⃣ Modeling  
+- Trained **LinearSVC** with tuned hyperparameters  
+- Combined engineered features + TF-IDF vectors  
+- Evaluated using **Accuracy, F1-score, and Confusion Matrix**  
+
+### 4️⃣ Deployment  
+- Saved trained model as `model.pkl` and vectorizer as `cv.pkl`  
+- Developed **Streamlit Web App** with simple UI  
+- Deployed live on Streamlit Cloud  
 
 
-Dataset Information
 
-We use the Quora Question Pairs Dataset, which contains over 400,000 question pairs.
-
-Key Features in the Dataset:
-
-qid1, qid2 → Question IDs
-
-question1, question2 → The actual text of the questions
-
-is_duplicate → Target variable (1 = Duplicate, 0 = Not Duplicate)
-
-Additional engineered features:
-
-Token similarity
-
-Cosine similarity of TF-IDF vectors
-
-Common word count
-
-Fuzzy string matching scores
-
-Strategic Planning
-
-To address the problem, we followed a structured pipeline:
-
-Import Libraries
-
-pandas, numpy, scikit-learn, nltk, fuzzywuzzy, streamlit
-
-Load Dataset
-
-Import Quora dataset (CSV)
-
-Data Preprocessing
-
-Handle missing values
-
-Text cleaning: lowercasing, stopword removal, punctuation removal
-
-Tokenization & Lemmatization
-
-Feature Engineering
-
-Similarity-based features (cosine similarity, Jaccard similarity)
-
-Length-based features (question length difference)
-
-Fuzzy matching ratios
-
-Model Training
-
-Models tried: Logistic Regression, Random Forest, XGBoost
-
-Evaluation using accuracy, precision, recall, F1-score
-
-Deployment
-
-Trained model saved as model.pkl
-
-CountVectorizer saved as cv.pkl
-
-Streamlit app built with input fields for two questions
-
-Project Outcomes & Conclusion
-
-✅ Built an ML pipeline that classifies Quora question pairs as duplicate or not.
-✅ Improved feature engineering with similarity measures.
-✅ Deployed a user-friendly Streamlit app for real-time predictions.
-✅ Helps Quora reduce redundancy and improve user experience.
